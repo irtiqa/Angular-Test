@@ -1,0 +1,12 @@
+.navbar-dark {
+    color:#fff;
+}
+.navbar-dark a,
+.navbar-dark a:hover,
+.navbar-dark a:active,
+.navbar-dark a:visited {
+    color:#fff;
+}
+.nav-link.active{
+    color: #70aef1 !important;
+}
