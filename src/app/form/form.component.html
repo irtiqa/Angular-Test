@@ -1,3 +1,31 @@
-<p>
-  form works!
-</p>
+<div class="row">
+  <div class="col-md-12">
+
+    <div class="card">
+      <div class="card-body">
+        <h1 class="card-title">Angular Contact Form</h1>
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm.value)">
+          <div class="form-group">
+            <label for="fname">Enter your First Name:</label>
+            <input type="text" id="fname" formControlName="fName" class="form-control" [(ngModel)]="firstName">
+          </div>
+          <div class="form-group">
+            <label for="lName">Enter your Last Name</label>
+            <input type="text" formControlName="lName" id="lName" class="form-control" [(ngModel)]="lastName">
+          </div>
+          <div class="form-group">
+            <label for="email">Enter your email address</label>
+            <input type="email" formControlName="email" id="email" class="form-control" [(ngModel)]="emailAddress">
+          </div>
+          <div class="form-group">
+            <label for="comment">Enter your comments</label>
+            <textarea name="comment" id="comment" formControlName="comment" class="form-control" cols="30" rows="10" [(ngModel)]="comments"></textarea>
+            <small class="form-text text-muted">Maximum {{maxAllowedCharacter}} characters</small>
+          </div>
+          <button class="btn btn-default" (click)="resetForm()">Reset</button>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
